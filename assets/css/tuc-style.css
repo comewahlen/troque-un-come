@@ -1,0 +1,520 @@
+
+html, body {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 0.9rem;
+}
+
+#page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+#masthead {
+    margin: 0 !important;
+    background-color: #ffffff;
+    flex: 0 0 auto;
+    padding: 1em 1em 0 1em;
+    width: 100%;
+}
+
+/* Aligner le logo à droite */
+.site-branding {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* Taille du logo */
+.site-branding img {
+    height: 38px;
+    width: auto;
+}
+
+/* --------------------------- Form header --------------------------- */
+
+/* Affichage */
+#page-troc-header {
+    width: 100%;
+    background-color: #ffffff;
+    flex: 0 0 auto;
+    padding: 0 1em;
+    min-height: 150px;
+    border-radius: 0 0 50px 50px;
+    
+}
+#tuc-form-header {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+
+}
+
+.btn-retour-accueil {
+    font-size: 0.8em;
+    color: #bababa; 
+    text-decoration: none;
+}
+
+/* Textes formulaire */
+#tuc-form-header h1 {
+    margin: 0 0 0 1em;
+    padding-right: 0.5em;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/* PROGRESS RING */
+
+#tuc-progress-ring {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+#tuc-progress-ring circle {
+    fill: none;
+    stroke-width: 6;
+}
+#tuc-progress-ring circle.cercle-bleu {
+    stroke: #0067FF;
+    transition: stroke-dashoffset 1s ease;
+}
+
+#tuc-progress-ring circle.cercle-gris  {
+    stroke: #f0f0f0;
+}
+
+/* Indicateur étape */
+#indicateur-etape {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    color: #bababa;
+    font-size: 0.8em;
+}
+
+#indicateur-etape.tourner-indicateur{
+    transition: transform 1s ease;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    transform-origin: center center;
+}
+
+@keyframes rotate-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.rotate-animation {
+  animation: rotate-spinner 1.4s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+
+/* --------------------------- Main --------------------------- */
+
+main {
+    padding: 0px 1em;
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    max-width: 760px;
+}
+
+/* Bouton retour accueil */
+#retour-accueil {
+    margin-bottom: 1em;
+}
+
+/* --------------------------- Formulaire troc --------------------------- */
+
+#formulaire-troc {
+    display: flex; 
+    justify-content: center;
+    border-radius: 10px;
+    min-width: 100%;
+}
+
+.etape {
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.consigne {
+    width: 100%;
+    font-size: 0.9em;
+    color: #969696;
+    
+}
+
+.active {
+    display: flex;
+}
+/* --------------------------- Navigation --------------------------- */
+
+/* Position des boutons */
+.tuc-form-navigation {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    background-color: #ffffff;
+    flex: 0 0 auto;
+}
+
+
+
+/* Taille du texte btn + formes boutons */
+.tuc-form-navigation button, .tuc-form-navigation a {
+    padding: 0.6em 1em 0.4em;
+    line-height: 1;
+    font-size: 1.1em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/* Bouton suivant */
+.tuc-form-navigation .btn-suivant, #btn-submit, .btn-accueil {
+    border: none;
+    background-color: #0067FF;
+    color: #ffffff;
+}
+
+/* Bouton précédent */
+.btn-retour, #bouton-accueil-resultat {
+    background-color: #ffffff00;
+    border-style: none;
+    color: #bababa; 
+}
+
+#btn-commencer {
+    justify-content: center;
+}
+.tuc-bouton {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10%;
+}
+#btn-modifier {
+    padding-right: 0.8em;
+    max-width: 60%;
+}
+
+
+/* --------------------------- Radios -> Box --------------------------- */
+.tuc-radio-input {
+    display: none;
+}
+
+.tuc-radio-label {
+    border: 3px solid #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #969696;
+    position: relative;
+    font-size: 1.1em;
+}
+
+.tuc-radio-label .bi {
+    padding-left: 0.4em;
+    position: absolute;
+    left: 0;
+}
+
+input[type="radio"]:checked + .tuc-radio-label {
+    border-color: #8BBAFF;
+    color: #0067FF;
+}
+/* --------------------------- Étapes formulaire --------------------------- */
+
+/* Erreur champ obligatoire */
+.tuc-champs-obligatoires-box {
+    border-color: #ff5151 !important;
+    background-color: #ffe1e1 !important;
+}
+
+.tuc-champs-obligatoires-box::placeholder {
+    color: #ffacac !important;
+}
+
+.tuc-champs-obligatoires-consigne {
+    color: #ff5151;
+}
+
+
+
+/* Commencer */
+#tuc-description-dessin {
+    text-align: center;
+}
+
+#tuc-description-dessin p {
+    color: #969696;
+}
+
+#tuc-dessin-troc {
+    border-radius: 10px;
+}
+
+/* Type de troc */
+
+.tuc-radio-label.large {
+    width :90%;
+    height: 4em;
+    margin-top: 1em;
+}
+
+.tuc-radio-label.large span {
+    padding-left: 2em;
+}
+
+.tuc-radio-label.large .bi {
+    font-size: 2em;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* CATEGORIES */
+
+#tuc-etape-categorie {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5em 0.5em;
+    position: relative;
+}
+
+#tuc-etape-categorie .consigne {
+    width: 100%;
+}
+.tuc-radio-label.small .bi {
+    font-size: 3em;
+    position: relative;
+}
+
+.tuc-radio-label.small {
+    height: 5em;
+    width: 100%;
+    font-size: 0.7em;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.tuc-radio-label.small span{
+    text-align: left;
+    width: 100%;
+    margin-left: 0.8em;
+}
+
+.elementCategorie {
+    width : 47%;
+}
+/*--------------------------------------------------------------------------------------------------------*/
+/* PHOTOS */
+
+#bouton-ajouter-photo {
+    border: 3px dotted #8BBAFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0067FF;
+    background-color: #ECF4FF;
+    position: relative;
+    font-size: 1.1em;
+    width: 90%;
+    height: 4em;
+    margin-top: 1em;
+}
+
+#bouton-ajouter-photo i {
+    margin-right: 0.4em;
+}
+
+#tuc-apercu {
+
+    margin-top: 1em;
+    width: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    gap: 2.5%;
+    position: relative;
+
+}
+
+.tuc-img-preview {
+    position: relative;
+    max-width: 31.666%;
+}
+
+.tuc-btn-supprimer-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 1;
+    font-size: 1em;
+    padding: 0.2em;
+    color: #969696;
+}
+
+
+#tuc-apercu img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+/* Description */
+
+#description {
+    width: 100%;
+    /* background-color: #f0f0f0; */
+    height: 300px;
+    resize: none;
+    border: 3px solid #f0f0f0;
+    border-radius: 10px;
+    padding: 0.8em;
+    font-size: 1.1em;
+    color: #333333;
+}
+
+#description::placeholder {
+    font-size: 1.1em;
+    color: #eaeaea;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* CONTACT */
+#tuc-etape-contact {
+    align-items: flex-start;
+}
+
+input[type="text"].tuc-contact-inputs, input[type="email"].tuc-contact-inputs, input[type="tel"].tuc-contact-inputs {
+    border-style: none;
+    background-color: #f9f9f9;
+    padding: 0.6em;
+    width: 100%;
+    margin-bottom: 1.1em;
+    font-size: 1.1em;
+    color: #333333;
+    border-radius: 10px;
+
+}
+
+#tuc-etape-contact label.consigne {
+    font-size: 0.8em;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* RESUME */
+.tuc-resume-troc {
+    width: 100%;
+    padding: 0;
+}
+
+.tuc-resume-textes {
+    font-size: 1.1em;
+    color: #969696;
+}
+
+.tuc-resume-troc p{
+    margin: 0;
+}
+
+.tuc-resume-troc-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color:#f9f9f9;
+    border-radius: 10px;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    margin-bottom: 1.1em;
+}
+
+.tuc-resume-labels {
+    width: 50%;
+    padding-left: 0.8em;
+}
+
+.tuc-resume-inputs {
+    width: 50%;
+    font-weight: bold;
+}
+
+#tuc-input-photos {
+    display: flex;
+    flex-direction: row;
+}
+
+#tuc-input-photos img {
+    width: 33.333%;
+    padding-right: 0.4em;
+}
+#tuc-resume-dessin img {
+    border-radius: 10px;
+}
+#tuc-resume-dessin .tuc-resume-labels {
+    padding-right: 0.8em;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* RESULTAT */
+
+.tuc-etape-resultat-container {
+    flex-direction: column;
+    color: #333333;
+    width: 80%;
+}
+
+/*--------------------------------------------------------------------------------------------------------*/
+/* RESPONSIVE */
+
+@media (min-width: 480px) {
+  html {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.0625em;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 1.125em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

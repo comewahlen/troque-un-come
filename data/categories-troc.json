@@ -1,0 +1,145 @@
+{
+    "objet": {
+      "consigne": "Choisir un type d'objet :",
+      "options": [
+        {
+          "value": "electronique",
+          "label": "Électronique",
+          "aide": "C’est un vieil ordinateur mais il fonctionne du tonnerre…",
+          "icon": "bi bi-music-player"
+        },
+        {
+          "value": "mode",
+          "label": "Mode",
+          "aide": "Ce sont de beaux souliers à la mode…",
+          "icon": "bi bi-incognito"
+        },
+        {
+          "value": "nourriture",
+          "label": "Nourriture & Consommables",
+          "aide": "Ce sont des pommes et une brosse à dents…",
+          "icon": "bi bi-egg-fried"
+        },
+        {
+          "value": "maison",
+          "label": "Maison & Jardin",
+          "aide": "C’est une chaise, elle est belle…",
+          "icon": "bi bi-house"
+        },
+        {
+          "value": "vehicules",
+          "label": "Véhicules",
+          "aide": "C’est une trottinette qui va à 60kmh…",
+          "icon": "bi bi-bicycle"
+        },
+        {
+          "value": "art",
+          "label": "Art & Objets de collection",
+          "aide": "C’est une peinture que j’ai faite…",
+          "icon": "bi bi-easel"
+          
+        },
+        {
+          "value": "media",
+          "label": "Livres, Musiques & Films",
+          "aide": "C’est un livre qui parle des animaux d’Afrique…",
+          "icon": "bi bi-book"
+        },
+        {
+          "value": "pro",
+          "label": "Matériel Professionnel",
+          "aide": "C’est un système de ventilation de cuisine…",
+          "icon": "bi bi-paint-bucket"
+        },
+        {
+          "value": "beaute",
+          "label": "Beauté & Santé",
+          "aide": "C’est un rouge à lèvre un peu usé…",
+          "icon": "bi bi-prescription2"
+        },
+        {
+          "value": "autre objet",
+          "label": "Autre objet",
+          "aide": "Je propose de troquer…",
+          "icon": "bi bi-box-seam"
+        }
+      ]
+    },
+    "service": {
+      "consigne": "Choisir un type de service :",
+      "options": [
+        {
+          "value": "domicile",
+          "label": "Services à domicile (ménage, cuisine…)",
+          "aide": "Je fais le ménage chez toi une fois par mois…",
+          "icon": "bi bi-house-heart"
+        },
+        {
+          "value": "admin",
+          "label": "Assistance administrative",
+          "aide": "Je revois la comptabilité d’acheteuncome…",
+          "icon": "bi bi-file-earmark-text"
+        },
+        {
+          "value": "logement",
+          "label": "Logement courte à longue durée",
+          "aide": "Je te loge dans la maison de ma grand-mère 3 semaines…",
+          "icon": "bi bi-building"
+        },
+        {
+          "value": "photo",
+          "label": "Photos & Vidéos",
+          "aide": "Je fais des photos professionnelles de tes 15 dernières peintures…",
+          "icon": "bi bi-camera"
+        },
+        {
+          "value": "informatique",
+          "label": "Informatique",
+          "aide": "Je t’aide pour le développement de acheteuncome.com pendant 6 semaines...",
+          "icon": "bi bi-terminal"
+        },
+        {
+          "value": "soins",
+          "label": "Soins & massages",
+          "aide": "Je propose un massage tête-pieds de 1 heure…",
+          "icon": "bi bi-bandaid"
+        },
+        {
+          "value": "bricolage",
+          "label": "Bricolage & Réparations",
+          "aide": "Je couds les ourlets de 5 de tes pantalons…",
+          "icon": "bi bi-hammer"
+        },
+        {
+          "value": "transport",
+          "label": "Transport & Déménagement",
+          "aide": "Je fais taxi pendant 1 mois…",
+          "icon": "bi bi-truck"
+        },
+        {
+          "value": "cours",
+          "label": "Cours particuliers",
+          "aide": "Je t’apprends la communication non violente une fois par semaine…",
+          "icon": "bi bi-award"
+        },
+        {
+          "value": "coaching",
+          "label": "Coaching",
+          "aide": "Je te coach pour être bien portant pendant 8 semaines…",
+          "icon": "bi bi-person-raised-hand"
+        },
+        {
+          "value": "voyage",
+          "label": "Voyage",
+          "aide": "Je t’emmène un week-end à Tijuana…",
+          "icon": "bi bi-suitcase"
+        },
+        {
+          "value": "autre service",
+          "label": "Autre objet",
+          "aide": "Je propose de troquer…",
+          "icon": "bi bi-box-seam"
+        }
+      ]
+    }
+  }
